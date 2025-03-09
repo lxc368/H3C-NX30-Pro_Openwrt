@@ -20,17 +20,17 @@ sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_gener
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='H3C-NX30-Pro'' package/lean/default-settings/files/zzz-default-settings
 
 # 版本号里显示一个自己的名字（ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
-sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ lxc368 /g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") /g' package/lean/default-settings/files/zzz-default-settings
 
 # 状态系统增加个性信息
-sed -i "s/exit 0//" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/exit 0//" package/lean/default-settings/files/zzz-default-settings
 
-echo "sed -i '/CPU usage/a\<tr><td width=\"33%\">关于</td><td><a class=\"author-blog\" href=\"https://github.com/lxc368/H3C_NX30_Pro-Openwrt\">编译源地址</a></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
-echo "sed -i '/关于/a\<tr><td width=\"33%\">天气</td><td><iframe width=\"640\" scrolling=\"no\" height=\"75\" frameborder=\"0\" allowtransparency=\"true\" src=\"https://i.tianqi.com?c=code&id=39&color=%23FF7600&icon=3&num=2&site=12\"></iframe></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+#echo "sed -i '/CPU usage/a\<tr><td width=\"33%\">关于</td><td><a class=\"author-blog\" href=\"https://github.com/lxc368/H3C_NX30_Pro-Openwrt\">编译源地址</a></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
+#echo "sed -i '/关于/a\<tr><td width=\"33%\">天气</td><td><iframe width=\"640\" scrolling=\"no\" height=\"75\" frameborder=\"0\" allowtransparency=\"true\" src=\"https://i.tianqi.com?c=code&id=39&color=%23FF7600&icon=3&num=2&site=12\"></iframe></td></tr>' /usr/lib/lua/luci/view/admin_status/index.htm" >> package/lean/default-settings/files/zzz-default-settings
 
-echo "" >> package/lean/default-settings/files/zzz-default-settings
-echo "" >> package/lean/default-settings/files/zzz-default-settings
-echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
+#echo "" >> package/lean/default-settings/files/zzz-default-settings
+#echo "" >> package/lean/default-settings/files/zzz-default-settings
+#echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
 
 #删除原默认主题
 #rm -rf package/lean/luci-theme-bootstrap
