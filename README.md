@@ -2,7 +2,7 @@
 
 MT76开源无线驱动
 
-内置插件:WOL网络唤醒，ipv6-helper，EaseyMesh，zram-swap
+内置插件:WOL网络唤醒，ipv6-helper，EasyMesh，zram-swap
 
 默认SSID：H3CWIFINX30Pro  默认密码：password
 
